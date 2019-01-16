@@ -1,3 +1,6 @@
+# Clear R of previously opened files before starting 
+rm(list=ls())
+
 # Install required packages - can skip if previously installed
 install.packages("doBy")
 install.packages("ggplot2")
