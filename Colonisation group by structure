@@ -1,0 +1,15 @@
+# Install required packages - can skip if previously installed
+install.packages("doBy")
+install.packages("ggplot2")
+install.packages("reshape2")
+
+
+# Load required packages - needed whenever starting new R session
+library(doBy)
+library(ggplot2)
+library(reshape2)
+
+
+# Import data - when using R Studio import data using 'Environment tab'. Here, data file is called 'Colonisation_R_BMZM3'
+col<-as.data.frame(Colonisation_R_BMZM3)
+col1<- summaryBy(TotalColonisation + EH + H + IH + A + V + S ~ Phenotype, data=col, FUN=c(length,mean,sd))
