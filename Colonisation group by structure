@@ -24,3 +24,4 @@ colpoints <- melt(col, id=c(1))
 
 # Make graph consisting of overlapping scatter plot and histogram
 col1plot<-ggplot(mdata, aes(Phenotype,value,)) + geom_bar(aes(fill=variable),position=position_dodge(width=0.88), stat="identity",colour="black", size=.3) + geom_point(data=colpoints,position=position_dodge(width=0.88),aes(Phenotype, value,group=variable),shape=18,size=0.9)+xlab("Phenotype") +ylab("Percentage Colonisation") + ggtitle("Colonisation of ina mutant")  + scale_fill_brewer(name="", labels=c("Total Colonisation", "EH", "H","IH","A","V","S"))  +theme_minimal()+ theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+ ylim(0,100)
+col1plot
